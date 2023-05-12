@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	function pulaLinha(){
+		document.write("<br><br>");
+	};
+	function mostra(frase){
+		document.write("<big>"+ frase + "</big>");
+		pulaLinha();
+	};
+	function sorteia(n) {
+		// body...
+		n = Math.round(Math.random()*n);
+		console.log("número sorteado "+ n);
+		return  n;
+	}
+	var num = parseInt(prompt("Digite o valor do limite do sorteio: "));
+	var numeroPensado = sorteia(num);
+	console.log(numeroPensado);
+	var chute = parseInt(prompt("Digite seu chute!"));
+	if (chute == numeroPensado){
+		mostra("Você acertou");
+	}else{
+		if(chute < numeroPensado){
+			mostra("Seu chute " + chute +" foi menor do que o número sorteado "+ numeroPensado)
+		}else{
+			mostra("Seu chute " + chute +" foi maior do que o número sorteado "+ numeroPensado)
+		}
+	}
+
+
+</script>
