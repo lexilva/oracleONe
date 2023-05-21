@@ -1,0 +1,91 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+	var auxiliar ="";
+	var mensagemEncriptada ='';
+	var mensagemDecriptada = '';
+	function ehvogal(letra){
+		if((letra === 'a')||(letra ==='e')||(letra === 'i')||(letra === 'o')||(letra ==='u')){
+				return 1;
+			}else{
+				return 0;
+			}
+	}
+	function codificaVogal(vogal){
+		if (vogal === 'a'){
+			return 'ai';	
+		}else if(vogal === 'e'){
+			return 'enter';
+		}else if (vogal === 'i'){
+			return 'imes';
+		}else if (vogal === 'o'){
+			return'ober';
+		}else{
+			return 'ufat';
+		}
+	}
+	function decodificaMensagem(letra, msg){
+		var decripatacao = '';
+		auxiliar = msg;
+		if (letra === 'a'){
+			console.log('aux:'+auxiliar)
+			console.log('trocou ai por a:'+ auxiliar)
+			decripatacao = auxiliar.replace('ai','a');
+			return decripatacao
+
+		}else if(letra === 'e'){
+				return auxiliar.replace('enter','e');
+				
+		}else if(letra === 'i'){
+				return auxiliar.replace('imes','i');
+				
+		}else if(letra === 'o'){
+				console.log('trocou: ober por o: '+ auxiliar)
+				decripatacao = auxiliar.replace('ober','o');
+				console.log(decripatacao)
+				return decripatacao
+		}else if (letra === 'u'){
+				return auxiliar.replace('ufat','u');	
+		}
+		auxiliar = '';
+	}
+	function decriptar(msg){
+			var i = 0;
+			while(i < msg.length){
+				if(ehvogal(msg.charAt(i))){
+						console.log('índice atualizado: '+i)
+						mensagemDecriptada += decodificaMensagem(msg[i],msg);
+					}else{
+						mensagemDecriptada += msg[i];
+						console.log('consoante da palavra: '+ msg.charAt(i))
+					}
+				i++;	
+			}
+			return mensagemDecriptada;
+	}
+	function encriptar(msg){
+		for (var i = 0; i < msg.length;i++){
+			if(ehvogal(msg.charAt(i)) ){
+				mensagemEncriptada+= codificaVogal(msg[i]);	
+			}else{
+				mensagemEncriptada += msg[i]
+			}	
+		}	
+	}
+	
+	var mensagem = prompt('Digite sua mensagem:');
+	encriptar(mensagem);
+	console.log(mensagemEncriptada);
+	console.log('*-**--***---***--**-*')
+	mensagemDecriptada = decriptar(mensagemEncriptada);
+	console.log("Mensagem decripitada: "+ mensagemDecriptada);
+	
+</script>
+<!--
+//A letra "e" é convertida para "enter"
+//A letra "i" é convertida para "imes"
+//A letra "a" é convertida para "ai"
+//A letra "o" é convertida para "ober"
+//A letra "u" é convertida para "ufat"
+-->
