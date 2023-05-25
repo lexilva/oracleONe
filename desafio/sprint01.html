@@ -1,0 +1,75 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+	var auxiliar ="";
+	var mensagemEncriptada ='';
+	var mensagemDecriptada = '';
+	function ehvogal(letra){
+		if((letra === 'a')||(letra ==='e')||(letra === 'i')||(letra === 'o')||(letra ==='u')){
+				return 1;
+			}else{
+				return 0;
+			}
+	}
+	function codificaVogal(vogal){
+		if (vogal === 'a'){
+			return 'ai';	
+		}else if(vogal === 'e'){
+			return 'enter';
+		}else if (vogal === 'i'){
+			return 'imes';
+		}else if (vogal === 'o'){
+			return'ober';
+		}else{
+			return 'ufat';
+		}
+	}
+	function decodificaMensagem(msg){
+		let mensagem = msg.replace(/ai/g, 'a');
+		let temp = mensagem.replace(/enter/g, 'e');
+		mensagem = temp.replace(/imes/g, 'i');
+		temp = mensagem.replace(/ober/g, 'o');
+		mensagem = temp.replace(/ufat/g, 'u');
+
+		return mensagem;
+	}
+	function decriptar(msg){
+			var i = 0;
+			let aux = msg;
+			while(i < msg.length){
+				if(ehvogal(msg.charAt(i))){
+						i = decodificaMensagem(msg[i],aux,i);
+						aux = mensagemDecriptada;
+					}else{
+						
+						i++;
+					}
+					
+			}
+			return mensagemDecriptada;
+	}
+	function encriptar(msg){
+		for (var i = 0; i < msg.length;i++){
+			if(ehvogal(msg.charAt(i)) ){
+				mensagemEncriptada+= codificaVogal(msg[i]);	
+			}else{
+				mensagemEncriptada += msg[i]
+			}	
+		}	
+	}
+	var mensagem = prompt('Digite sua mensagem:');
+	encriptar(mensagem);
+	console.log(mensagemEncriptada);
+	console.log('*-**--***---***--**-*')
+	mensagemDecriptada = decodificaMensagem(mensagemEncriptada);
+	console.log("Mensagem decripitada: "+ mensagemDecriptada);
+	
+</script>
+<!--
+//A letra "e" é convertida para "enter"
+//A letra "i" é convertida para "imes"
+//A letra "a" é convertida para "ai"
+//A letra "o" é convertida para "ober"
+//A letra "u" é convertida para "ufat"
+-->
