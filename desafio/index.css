@@ -1,0 +1,104 @@
+body{
+	box-sizing: border-box;
+	background-color: #F3F5FC;
+	color: #0A3871;
+	margin: auto;
+}
+h1{
+	display: block;
+	padding: 60px  50PX;
+}
+h1 img{
+	width: 120px;
+	height: 50px;
+}
+main{
+	width: 950px;
+	height: 400px;
+
+}
+input{
+	background-color: #F3F5FC;  
+	border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    margin-left: 25%;
+    color: #0A3871;
+}
+.texto:focus{
+	color: #0A3871;
+}
+.texto:hover{
+	background-color: green;
+}
+#resposta{
+	position: absolute;
+	top: 40px;
+	left: 1150px;
+	width: 400px;
+	height: 700px;
+	border-radius: 30px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+#resposta input{
+	background-color: #FFFFFF;
+    margin-left: 5px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    /* margin-left: 0; */
+    color: #0A3871;
+}
+#pesquisa{
+	padding-top: 40%;
+	padding-left: 8%;
+}
+p{
+	margin: 10px auto;
+	text-align: center;
+}
+#button{
+	margin-top: 70px;
+	margin-left: 0px;
+
+}
+#btncodifica{
+	margin-left: 15%;
+	padding: 15px;
+	width: 280px;
+	height: 60px;
+	background: #0A3871;
+	border-radius: 20px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 19px;
+	text-align: center;
+	color: #FFFFFF;
+}
+#btndescodifica{
+	margin-left: 10px;
+	width: 280px;
+	height: 60px;
+	background: #D8DFE8;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 19px;
+	text-align: center;
+	border: 1px solid #0A3871;
+	border-radius: 20px;
+	color: #0A3871;
+
+
+
+}
