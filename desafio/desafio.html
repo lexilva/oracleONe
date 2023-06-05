@@ -4,29 +4,41 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>challenge Decodificador</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-	<h1>
-		<img src="./img/logo.png" alt="logo da Alura">
-	</h1>
+	<header>
+		<img id="logoAlura" src="./img/logo.png" alt="logo da Alura">
+	</header>
 	<main>
-		<input type="text" name="texto" id="textoDeEntrada" placeholder="Digite seu texto" autofocus>
-		<section id="resposta">
+		<section >
+			<input type="text" name="texto" id="input" placeholder="Digite seu texto" autofocus>
+
+			<h6>apenas letras minúsculas e sem acentos</h6>
+			<div >
+				<button type="" id="btncodifica">Criptografar</button>
+				<button type="" id="btndescodifica">Descriptografar</button>
+			</div>
+								
+		</section>
+		<section  id="espacoResposta">
 			<img id="pesquisa" src="./img/High quality products 1 1.svg">
-			<p id="mensagem">
-				<strong>Nenhuma mensagem encontrada</strong>	
-			</p>
+
+			<textarea id="resposta"></textarea>	
 			<p>
-				Digite um texto que você deseja criptografar ou descriptografar
+					<strong>Nenhuma mensagem encontrada</strong><br>	
+					Digite um texto que você deseja criptografar ou descriptografar
 			</p>
+			<div id="botaoCopiar">
+				<button id="btncopiar"> Copiar</button>
+			</div>
+			
 		</section>
 	</main>
-	<section id="button">
-			<button type="" id="btncodifica">Criptografar</button>
-			<button type="" id="btndescodifica">Descriptografar</button>				
-	</section>
+	
 	<script type="text/javascript" src="desafio.js"></script>	
 </body>
 </html>

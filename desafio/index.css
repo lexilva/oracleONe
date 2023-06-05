@@ -1,40 +1,36 @@
-body{
-	box-sizing: border-box;
-	background-color: #F3F5FC;
-	color: #0A3871;
-	margin: auto;
+*{
+	background: #F3F5FC;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 150%;
 }
-h1{
+#logoAlura{
 	display: block;
 	padding: 60px  50PX;
-}
-h1 img{
-	width: 120px;
-	height: 50px;
+	width: 5%;
 }
 main{
-	width: 950px;
-	height: 400px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+	margin-left: 80px;
 
 }
 input{
 	background-color: #F3F5FC;  
 	border: none;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    margin-left: 25%;
-    color: #0A3871;
+	margin-top: 90px;
+	text-transform: lowercase;
+    :placeholder(color:#0A3871)
+		    .input focus(outline: none)
+    
 }
-.texto:focus{
-	color: #0A3871;
+div{
+	display: flex;
+	align-items: flex-start;
 }
-.texto:hover{
-	background-color: green;
-}
-#resposta{
+#espacoResposta{
 	position: absolute;
 	top: 40px;
 	left: 1150px;
@@ -44,43 +40,40 @@ input{
 	background-color: #FFFFFF;
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
-#resposta input{
-	background-color: #FFFFFF;
-    margin-left: 5px;
-    border: none;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    /* margin-left: 0; */
-    color: #0A3871;
+h6{
+	padding-top: 300px;
+	font-size: 18px;
+	font-style: italic;
 }
 #pesquisa{
-	padding-top: 40%;
+	padding-top: 10%;
 	padding-left: 8%;
+	background: #FFFFFF;
 }
 p{
-	margin: 10px auto;
+	margin: 20px auto;
 	text-align: center;
+	font-size: 15px;
+	background: #FFFFFF;
+}
+strong{
+	font-size: 23px;
+	font-weight: 700;
 }
 #button{
 	margin-top: 70px;
 	margin-left: 0px;
-
+}
+.botoes{
+	display: flex;
+	align-items: flex-end;
 }
 #btncodifica{
 	margin-left: 15%;
-	padding: 15px;
 	width: 280px;
 	height: 60px;
 	background: #0A3871;
 	border-radius: 20px;
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 19px;
 	text-align: center;
 	color: #FFFFFF;
 }
@@ -89,16 +82,44 @@ p{
 	width: 280px;
 	height: 60px;
 	background: #D8DFE8;
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 19px;
 	text-align: center;
 	border: 1px solid #0A3871;
 	border-radius: 20px;
 	color: #0A3871;
-
-
-
 }
+#btncopiar{
+	width: 280px;
+	align-content: flex-end;
+	justify-content: center;
+	margin:auto;
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+	background-color: #FFFFFF;
+	background: #ffffff;
+}
+#resposta{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	width: 150px;
+	height: 80px;
+	font-size: 30px;
+	background-color: #FFFFFF;
+	color: #0A3871;
+	margin: auto;
+	border: none;
+}
+#botoes{
+	display: flex;
+	align-items: flex-end;
+	background: #ffffff;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#botaoCopiar{
+	background-color: #FFFFFF;
+    align-items: center;
+    margin-left: 60px;
+}
+
+
