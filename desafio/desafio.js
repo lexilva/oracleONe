@@ -25,7 +25,7 @@ function codificaVogal(vogal){
 function filtraMensagem(str){
 	var frase = str;
 	frase = frase.normalize('NFD').replace(/[\u0300-\u036f]/g,"");
-	frase = frase.toLowerCase().replace(/[^a-z]/g,"");
+	frase = frase.toLowerCase().replace(/[^a-z\s]/g,"");
 	return frase;
 }
 function decriptar(){
